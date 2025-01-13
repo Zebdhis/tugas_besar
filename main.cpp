@@ -130,7 +130,6 @@ void thirdWindows(){
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
-	glLightfv(GL_LIGHT0, GL_POSITION, light_position);
 	
 	
 	glPushMatrix();
@@ -209,7 +208,7 @@ void thirdWindows(){
     glRotatef(Xpos, 0.0, 1.0, 0.0);
     drawMatras();
     
-	inisialisasi();
+	satu();
 	hiddenCarte();
 	glutSwapBuffers();
 	glutPostRedisplay();
@@ -425,6 +424,7 @@ void keyboard(unsigned char key , int x,int y){
 }
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
 	//ABIZAR
 	glutInitWindowSize(500,400);
 	glutInitWindowPosition(440, 150);
